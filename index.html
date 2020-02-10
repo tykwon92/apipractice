@@ -7,19 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
 </head>
 
 <body>
-    <h1>Weather</h1>
+    <div class="title">
+        <h1>Weather</h1>
+    </div>
+
     <div class="input">
-        <input type="text" class="inputValue" placeholder="Enter a City">
-        <input type="submit" value="Submit" class="button">
+        <input type="text" class="inputValue" placeholder="Enter a City" class="bar">
+        <input type="submit" value="Submit" class="button" id='search'>
     </div>
     <div class="display">
         <h1 class="name"></h1>
+        <p class="temp"></p>
         <p class="desc"></p>
+
+
     </div>
     <script src="app.js"></script>
+    <script>
+        const title = document.querySelector('.title')
+        title.classList.add('animated', 'bounce');
+
+
+    </script>
+    
 </body>
 
 </html>

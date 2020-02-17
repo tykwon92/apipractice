@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+@mixin button-bg($bg) {
+    background: $bg;
+    &:hover {
+      background:darken($bg,8%);
+      transition: all 0.3s ease;
+    }
+    &:active {
+      background:darken($bg,25%);
+    } 
+  }
+
+$backgroundColor: #d1d1d1;
+$input: #e7e7e7;
+$display: #ffffff;
+
+body{
+    background: $backgroundColor;
+    font-family: 'Poiret One', cursive;
+    text-align: center;
+    margin:50px;
+    
+
+    .title{
+
+        h1 {
+            font-size:70px
+        }
+    }   
+
+
+    .input{
+        text-align: center;
+        margin: 20px;
+        .inputValue{
+            width: 600px;
+            height: 50px;
+            background: $input;
+            font-family: 'Poiret One', cursive;
+            font-weight: bold;
+            font-size: 20px;
+            border: none;
+            border-radius: 2px;
+            @include button-bg($input)
+        }
+        .button{
+            width: 100px;
+            height: 50px;
+            background: $input;
+            font-family: 'Poiret One', cursive;
+            font-weight: bold;
+            font-size: 20px;
+            border: none;
+            border-radius: 2px;
+            @include button-bg($input)
+        }
+    }
+    .display{
+        text-align: center;
+        h2 {
+            font-family: 'Poiret One', cursive;
+            font-size: 20px;
+        }
+    }
+}
+
+
+
+
